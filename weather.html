@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>weather api</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="weather.css">
+        <script src="weather.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="mainbody img-responsive">
+                <!--HEADING-->
+                <div class="heading">
+                        <h1 style="font-family:Sofia">Weather App</h1>
+                        <p>&#9818; By Adarsh Shukla</p>
+                </div>
+                <div class="drop-down">     
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7 col-sm-6 col-xs-10">
+                            <!--DROP DOWN TO SELECT CITY-->
+                            <input type="text" onchange="weather()" id="location" placeholder="Enter city here">
+                        </div>
+                        <!--SELECT WITH RESPECT TO CURRENT LOCATION-->
+                        <div  class="col-lg-5 col-md-5 col-sm-6 col-xs-10"> 
+                            <button onclick="geolocation()" id="current-loc">&#9673; Use Current Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row display-pannel">
+                    <!--LEFT DISPLAY PANNEL-->
+                    <div class="left-display col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="temp">
+                            <h2><p id="output-name"></p></h2>   <!--DISPLAY CITY NAME-->
+                            <div class="row">
+                                <span id="output-logo" class="col-lg-9"></span>
+                                <h1 class="col-lg-3">
+                                    <span id="output-temp"></span>  <!--DISPLAY TEMPREATURE-->
+                                    <span>&#8451;</span> <!--DEGREE CELCIUS-->
+                                </h1>
+                            </div>
+                            <h2><p id="output-disc"></p></h2>   <!--DISPLAY DISCRIPTION-->
+                            <h3>Humidity: <span id="output-humidity"></span> %</h3>
+                            <h3>Wind: <span id="output-wind"></span> km/hr</h3>
+                        </div>
+                    </div>
+                    <!--RIGHT DISPLAY PANNEL-->
+                    <div class="right-display col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="left-content">
+                            <h1>Feels Like</h1> 
+                            <h1><p><span id="output-feels-like"></span><span>&#8451;</span></p></h1>
+                            <h3>Min-Temp: <span id="output-min-temp"></span> &#8451</h3>
+                            <h3>Max-Temp: <span id="output-max-temp"></span> &#8451</h3>
+                            <h3>Pressure: <span id="output-pressure"></span> hPa</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Made with &#128151; By ADARSH SHUKLA</p>
+            </div>
+        </div>
+    </body>
+</html>
