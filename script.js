@@ -9,7 +9,7 @@ function geolocation(){
     function showposition(position){
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
-        var url1 = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+        var url1 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
         call_url(url1);    //calling function to display data
     }
 }
@@ -17,7 +17,7 @@ function geolocation(){
 //function when drop down is used
 function weather(){
     var location = document.getElementById('location').value;
-    var url=`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+    var url=`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
     call_url(url);  //calling function to dispay data
     document.getElementById('location').value="";
 }
